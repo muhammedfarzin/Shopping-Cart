@@ -1,0 +1,34 @@
+.cart-item-count{
+    height: 30px;
+    width: 30px;
+    border-color: darkcyan;
+    background-color: rgb(62, 132, 160);
+    border-radius: 5px;
+    font-weight: bold;
+    border-right: none;
+    border-bottom: none;
+    color: #fff;;
+}
+.item-quantity{
+    font-size: 18px;
+}
+.address-text-box{
+    width: 95%;
+    border-style: solid;
+    border-color: lightgray;
+    border-radius: 3px;
+    border-width: 1px;
+    height: 35px;
+}
+.address-div{
+    width: 30%;
+    height: 240px;
+    border-style: solid;
+    border-width: 2px;
+    border-color: gray;
+    border-radius: 3px;
+    margin-top: 90px;
+}
+.w-85{
+    width: 85%;
+}

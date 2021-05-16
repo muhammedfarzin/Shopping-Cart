@@ -1,0 +1,32 @@
+<section>
+    <div class="container">
+        <table class="table mt-5">
+            <thead>
+                <tr>
+                    <th scope="col">Item</th>
+                    <th scope="col">Title</th>
+                    <th scope="col">Price</th>
+                    <th scope="col">Quantity</th>
+                </tr>
+            </thead>
+            <tbody>
+                {{#each products}}
+                <tr>
+                    <td><img style="height: 70px;width: 70px;" src="/product-images/{{this.product._id}}.jpg" alt=""></td>
+                    <td>{{this.product.name}}</td>
+                    <td>Rs.{{this.product.price}}</td>
+                    <td><button id="{{this.product._id}}MinusQuantityButton" class="cart-item-count mr-3" onclick="changeQuantity('{{this._id}}','{{this.product._id}}','{{../user._id}}',-1)">-</button>
+                        <span class="item-quantity" id="{{this.product._id}}">{{this.quantity}}</span>
+                        <button id="{{this.product._id}}PlusQuantityButton" class="cart-item-count ml-3" onclick="changeQuantity('{{this._id}}','{{this.product._id}}','{{../user._id}}',1)">+</button></td>
+                    <td><button onclick="deleteCartProduct('{{this._id}}','{{this.product._id}}')" class="btn btn-danger">Remove</button></td>
+                </tr>
+                {{/each}}
+            </tbody>
+        </table>
+        <hr>
+        <div class="float-right pr-5">
+            <h5 class="float-left mr-5">Rs.<span id="total">{{totalAmount}}</span></h5><br>
+            <a href="/place-order" style="width: 100%;" class="btn btn-success mt-3"><b>Place Order</b></a>
+        </div>
+    </div>
+</section>
